@@ -1,0 +1,17 @@
+﻿<div ng-controller="clientCtrl">
+    <div class="row" ng-repeat="client in clients">
+
+        <table>
+            <tr>
+                <td>
+                    <label><input type="checkbox" ng-click="onCheck(client)" ng-model="client.Selected" value="">{{client.Name}}</label>
+                </td>
+                <td ng-repeat="clientDropDown in client.ClientDropdowns" ng-if="client.Selected">
+                    ciao
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    <a ng-click="testPersistency()">test</a>
+</div>
